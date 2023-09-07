@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Library Management System</title>
+</head>
+<body>
+  <header>
+    <div class="toppart">
+    <div>
+    <h1>Library Management System</h1>
+    </div>
+    
+    <div class="reg">
+        <button id="res" style="background-color: #007bff; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;" onclick="window.location.href='index.html';">
+            Logout
+        </button>
+        
+    
+    </div>
+    
+    </div>
+  </header>
+  <div class="navbar">
+    <a href="success.html">Home</a>
+    <a href="#libp">Library</a>
+    <a href="#borrowp">Borrow</a>
+</div>
+  <div class="container">
+    <div class="book-list">
+        <div class="book" id="libp">
+            <div>
+            <img src="harry_potter.jpg" alt="Harry Potter">
+            <h3>Harry Potter</h3>
+            <p>Author: J.K. Rowling</p>
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi magni vel placeat voluptatibus reiciendis laudantium neque alias? Distinctio nisi explicabo quod numquam, eum sapiente reprehenderit aperiam aliquid, voluptas magnam ea.</p>
+            </div>
+        </div>
+      <div class="book">
+        <div>
+        <img src="pro.jpg" alt="American Prometheus">
+        <h3>American Prometheus</h3>
+        <p>Author: Kai Bird</p>
+        </div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi magni vel placeat voluptatibus reiciendis laudantium neque alias? Distinctio nisi explicabo quod numquam, eum sapiente reprehenderit aperiam aliquid, voluptas magnam ea.</p>
+        </div>
+    </div>
+    <div class="book">
+        <div>
+            <img src="Wings-of-Fire-An-Autobiography-by-APJ-Abdul-Kalam.jpg" alt="Wings-of-Fire-An-Autobiography-by-APJ-Abdul-Kalam">
+            <h3>Wing of Fire Autobiography</h3>
+            <p>Author: APJ Abdul Kalam</p>
+        </div>
+        <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi magni vel placeat voluptatibus reiciendis laudantium neque alias? Distinctio nisi explicabo quod numquam, eum sapiente reprehenderit aperiam aliquid, voluptas magnam ea.</p>
+        </div>
+    </div>
+</div>
+<div class="container" id="borrowp">
+    <h2>Borrow Book</h2>
+     <form>
+        <label for="book-title">Book Title:</label>
+        <input type="text" id="book-title" name="book-title" required>
+    
+        <label for="borrower-name">Your Name:</label>
+        <input type="text" id="borrower-name" name="borrower-name" required>
+        
+        <label for="return-date">Return Date:</label>
+        <input type="date" id="return-date" name="return-date" required>
+        
+        <button type="button" onclick="addbook()" style="background-color: #007bff; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+    Submit Book
+</button>
+    </form>
+</div>
+
+<div class="container" id="borrowed-books-container" style="display: none;">
+  <h2>Borrowed Books</h2>
+  <table id="borrowed-books-table">
+    <thead>
+      <tr>
+        <th>Book Title</th>
+        <th>Your Name</th>
+        <th>Return Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Borrowed books will be added here dynamically -->
+    </tbody>
+  </table>
+</div>
+
+
+<footer>
+    <p>2023 Library Management System</p>
+</footer>
+
+<script src="borrow.js"></script>
+</body>
+</html>
